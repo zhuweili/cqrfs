@@ -1,0 +1,19 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<head>
+    <title>动态添加链接</title>
+    <script type="text/javascript">
+        function AppendLink() {
+            var div = document.getElementById("divMain");
+            var linkTmp = document.createElement("a");
+            linkTmp.href = "http://www.jbxue.com";
+            linkTmp.innerText = "脚 本 学 堂"; //链接要使用innertText,不能使用value
+            div.appendChild(linkTmp);
+        }
+    </script>
+</head>
+<body>
+    <div id="divMain"></div>
+    <input type="button" value="添加链接" onclick="AppendLink()" />
+</body>
+</html>
